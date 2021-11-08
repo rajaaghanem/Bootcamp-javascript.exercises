@@ -8,4 +8,4 @@ function currDate(){
     return str;
 }
 
-console.log(date=currDate());
+console.log(date=currDate()); 
