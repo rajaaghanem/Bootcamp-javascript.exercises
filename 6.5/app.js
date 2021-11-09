@@ -12,8 +12,10 @@ console.log(staticArr);
 //! 2
 let fromArr= new Array (50);
 
-fromArr=Array.from(Array(100).keys());
+fromArr=Array.from(Array(101).keys());
+fromArr.shift();
 console.log(fromArr);
+
 
 //! 3
 
