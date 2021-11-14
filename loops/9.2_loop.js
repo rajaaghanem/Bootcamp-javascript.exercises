@@ -4,7 +4,7 @@ function  populationPercentages(population){
 
     while (i<4){
         let res = percentageOfWorld1(population[i]);
-        percentages.push(res+ "%");
+        percentages.push(res.toFixed(2)+ "%");
         i++;
     }
     return percentages;
