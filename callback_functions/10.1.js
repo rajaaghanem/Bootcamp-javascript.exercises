@@ -18,9 +18,34 @@ console.log(isString(555, print));
 
 //$2 
 
-function firstWordUpperCase(str, dash){
+function firstWordUpperCase(str, func){
     str = str.replace(str[0], str[0].toUpperCase());
+    return func(str);
+}
+
+function dash(str){
+    str = str.replace(/\s/g, "-");
     console.log(str);
 }
 
-firstWordUpperCase("rjaaa jgjgjjg")
+//! test
+
+firstWordUpperCase("hello world wahooo", dash);
+
+//$3
+
+function myFunc(str){
+    str = str.replace("a","$");
+    console.log(str);
+}
+
+firstWordUpperCase("hello world wahooo", myFunc);
+
+//$4 replace the first "a" with "$"
+
+function replacment(str, func){
+
+    return func(str);
+}
+
+replacment("halllo ma friend", myFunc);
