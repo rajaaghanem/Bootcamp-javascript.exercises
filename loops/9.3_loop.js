@@ -1,11 +1,12 @@
 function compare(arr1, arr2){
 
-    if(arr1.length !== arr2.length) return false;
-
-    for(let i=0; i<arr1.length; i++)
-    if (arr1[i] !== arr2[i]) return false;
-
-    return true;
+    let arr=[];
+    for(let i=0; i<arr1.length; i++){
+        for(let j=0; j<arr2.length; j++){
+            if (arr1[i]===arr2[j]) arr.push(arr1[i]);
+        }
+    }
+     return arr.length===0? none:arr;
 }
 
 
