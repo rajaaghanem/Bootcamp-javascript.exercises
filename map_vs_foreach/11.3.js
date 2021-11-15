@@ -78,18 +78,11 @@ const data = [
 //    }
 
    function meatAndFish(arr){
-       let newArr = [];
-        arr.forEach(function(obj){
-            let ar = obj[meats];
-            console.log(ar);
-            // obj['meats'].forEach(function(m){
-            //     newArr.push(m);
-            // })
-            // obj['fish'].forEach(function(f){
-            //     newArr.push(f);
-            // })
-       })
-       return newArr;
+       let ar = [];
+            for (let i = 0; i < arr.length; i++) { 
+                ar=(arr[i].meats);
+              }
+       return ar;
    }
 
    console.log(meatAndFish(data));
