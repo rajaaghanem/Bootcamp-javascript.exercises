@@ -68,12 +68,22 @@ const school = {
 
    }
 
+   function assignTeachersSubject (id, subject){
+     let teacher =findPerson("teachers", id);
+     let sub=teacher.subjects.find(s=> s===subject);
+     if (!sub) teacher.subjects.push(subject);
+     console.log(teacher);
+   }
+
+
    assignStudent(12,"math");
    assignStudent(12,"history");
    assignStudent(13,"history");
    assignStudent(11,"history");
 
+assignTeachersSubject(2,"math");
+assignTeachersSubject(2,"history");
+
 
    
 
-//    console.log(school);
