@@ -79,7 +79,7 @@ function shiftLetters(str){
     
     let arr = newArr.map(function(ch){
         if (ch.toUpperCase()!== ch.toLowerCase()){ //only for letters
-            ch= ch.charCodeAt()+1;
+            ch= ch.charCodeAt()-1;
             ch=String.fromCharCode(ch);
         }
         return ch;
