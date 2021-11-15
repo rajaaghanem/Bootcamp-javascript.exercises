@@ -68,21 +68,29 @@ const data = [
    console.log(before1990(data));
 
 
-   //3 
+   // 3 
 
-//    function food(arr){
-//        let foodObj = {};
-//        arr.forEach(function(obj){
-//         foodObj.hasOwnProperty(obj.)
-//        })
-//    }
+   function food(arr){
+       let foodArr = meatAndFish(arr);
+       let foodObj = {};
+       foodArr.forEach(function(i){
+        if(foodObj.hasOwnProperty(i)) foodObj[i]++;
+        else foodObj[i]=1;
+       })
+       return foodObj;
+   }
 
    function meatAndFish(arr){
        let ar = [];
-            for (let i = 0; i < arr.length; i++) { 
-                ar=(arr[i].meats);
-              }
+         arr.forEach(function(obj){
+             obj.favoriteFoods.meats.forEach(function(m){
+                 ar.push(m);
+             })
+             obj.favoriteFoods.fish.forEach(function(f){
+                 ar.push(f);
+             })
+         })
        return ar;
    }
 
-   console.log(meatAndFish(data));
+   console.log(food(data));
