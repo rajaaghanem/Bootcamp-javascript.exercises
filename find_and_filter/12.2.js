@@ -21,7 +21,6 @@ const candyStore = {
     return obj;
     } 
 
-    // console.log(getCandy(candyStore,"5hd7y"));
 
     function getPrice(candyStore, id){
     return getCandy(candyStore, id).price;
