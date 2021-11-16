@@ -39,16 +39,11 @@ const foodsWithUpperCase = [
    console.log(foodsWithUpperCase);
 
    // 3
-   
+
    const words = ["apple", "supercalifragilisticexpialidocious", "hi", "zoo"];
 
-   words.sort((a,b)=> {
-       if (a.length < b.length) return 1;
-       if (a.length > b.length) return -1;
-       if (a.length === b.length) return 0;
-   })
-
-
+   words.sort((a,b)=> 
+       b.length - a.length)
    console.log(words);
 
    
