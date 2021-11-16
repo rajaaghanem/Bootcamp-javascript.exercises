@@ -3,10 +3,10 @@
 const foods = ["falafel", "sabich", "hummus", "pizza with extra pineapple"];
 
 foods.sort();
-console.log(foods);
+// console.log(foods);
 
 foods.reverse();
-console.log(foods);
+// console.log(foods);
 
 
 // 2
@@ -36,7 +36,7 @@ const foodsWithUpperCase = [
         if (a===b) return 0;
      });
  
-   console.log(foodsWithUpperCase);
+//    console.log(foodsWithUpperCase);
 
    // 3
 
@@ -44,6 +44,17 @@ const foodsWithUpperCase = [
 
    words.sort((a,b)=> 
        b.length - a.length)
-   console.log(words);
+//    console.log(words);
 
+   // 4
+
+   const foodsWithUpperCase2 = ["falafel", "Sabich", "hummus", "pizza with extra pineapple"];
+
+   foodsWithUpperCase2.sort((a,b)=>{
+    if( a[0] < b[0]) return -1;
+    if( a[0] > b[0]) return 1;
+    if (a[0] === b[0]) return 0;
+   });
    
+
+   console.log(foodsWithUpperCase2);
