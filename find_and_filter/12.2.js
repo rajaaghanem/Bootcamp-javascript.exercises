@@ -27,19 +27,29 @@ const candyStore = {
     } 
     
     function addCandy(candyStore, id, name, price){
-        let obj={
-            id : id,
-            name : name,
-            price :price,
-            amount: 1
+        let candy = getCandy(candyStore,id);
+        if (candy) candy.amount++;
+        else{
+
+            let obj={
+                id : id,
+                name : name,
+                price :price,
+                amount: 1
+            }
+            candyStore.candies.push(obj);
         }
-        candyStore.candies.push(obj);
+        
     }
 
     function buy(candyStore, id){
-        candyStore.cashRegister = candyStore.cashRegister + getPrice(candyStore, id);
-        getCandy(candyStore, id).amount --;
-
+        let candy =  getCandy(candyStore, id);
+        if (candy.amount > 0 ){
+            candyStore.cashRegister = candyStore.cashRegister + getPrice(candyStore, id);
+            candy.amount --;
+        }
+        
+        else console.log ("Out of stock");
     }
 
 
