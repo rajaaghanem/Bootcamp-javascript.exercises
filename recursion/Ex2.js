@@ -1,3 +1,5 @@
+
+// with loop
 function reverse(str){
 let j=str.length-1;
     for(let i=0; i<str.length; i++){
@@ -12,3 +14,6 @@ let j=str.length-1;
 }
 
 console.log(reverse(["h", "e", "n", "i"]));
+
+//with recusion
+
