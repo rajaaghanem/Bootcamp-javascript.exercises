@@ -18,14 +18,14 @@ console.log(reverse(["h", "e", "n", "i"]));
 //with recusion
 
 function reverse2(str){
-  str=reverseAdd(str, 0, str.length-1);
+  reverseAdd(str, 0, str.length-1);
 }
 
 function reverseAdd(str, i, j){
 
     if (j<=i){
         console.log(str);
-        return str;
+        return;
     }
     else{
         
