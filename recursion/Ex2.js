@@ -17,3 +17,24 @@ console.log(reverse(["h", "e", "n", "i"]));
 
 //with recusion
 
+function reverse2(str){
+  str=reverseAdd(str, 0, str.length-1);
+}
+
+function reverseAdd(str, i, j){
+
+    if (j<=i){
+        console.log(str);
+        return str;
+    }
+    else{
+        
+    let tmp=str[i];
+    str[i]=str[j];
+    str[j]=tmp;
+    reverseAdd(str,i+1, j-1);
+    }
+}
+
+reverse2(["h", "e", "n", "i"]);
+
