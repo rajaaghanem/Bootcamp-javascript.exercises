@@ -25,16 +25,15 @@ function reverseAdd(str, i, j){
 
     if (j<=i){
         console.log(str);
-        return;
+        return str;
     }
     else{
         
     let tmp=str[i];
     str[i]=str[j];
     str[j]=tmp;
-    reverseAdd(str,i+1, j-1);
+    return reverseAdd(str,i+1, j-1);
     }
 }
 
 reverse2(["h", "e", "n", "i"]);
-
