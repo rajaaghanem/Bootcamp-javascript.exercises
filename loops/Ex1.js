@@ -13,7 +13,7 @@ function countX(n,t){
     return count;
 }
 
-console.log("count :",countX(24,8));
+console.log("countX :",countX(24,8));
 
 function countEven(n){
     let count=0;
@@ -25,3 +25,14 @@ function countEven(n){
 }
 
 console.log("countEven :", countEven(1245));
+
+function printReverse (n){
+    if (n===0) {
+        console.log(n);
+        return;
+    } 
+    console.log(n);
+    printReverse(n-1);      
+}
+
+printReverse (100);
